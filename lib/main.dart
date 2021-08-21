@@ -1,4 +1,6 @@
 import 'package:af/providers/PartsProvider.dart';
+import 'package:af/providers/ProductsProvider.dart';
+import 'package:af/providers/ShopsProvider.dart';
 import 'package:af/screens/HomeScreen.dart';
 import 'package:af/screens/ShopsScreen.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +18,16 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (_) => Filters(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ProductProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ShopsProvider(),
         )
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Asal Tlaky',
         theme: ThemeData(
           primarySwatch: Colors.orange,
         ),

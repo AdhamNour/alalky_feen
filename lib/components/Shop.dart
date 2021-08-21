@@ -2,8 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'dart:math';
+import 'package:af/models/Shop.dart' as ShopModel;
+
 class Shop extends StatelessWidget {
-  const Shop({Key? key}) : super(key: key);
+  final ShopModel.Shop shop;
+  const Shop({Key? key, required this.shop}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +25,11 @@ class Shop extends StatelessWidget {
                         Icons.star,
                         color: Theme.of(context).primaryColor,
                       ),
-                      rating: (new Random()).nextDouble()*5 ,
+                      rating: shop.shopRating,
                       itemSize: 25,
                       unratedColor:
                           Theme.of(context).primaryColor.withAlpha(64),
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.favorite_border,
-                          color: Theme.of(context).primaryColor,
-                        ))
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                 ),
@@ -42,8 +39,7 @@ class Shop extends StatelessWidget {
               child: Center(
                 child: GestureDetector(
                   child: CachedNetworkImage(
-                    imageUrl:
-                        'https://images.unsplash.com/photo-1558259299-5d46c4408730?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1291&q=80',
+                    imageUrl: shop.shopImageUrl,
                     progressIndicatorBuilder:
                         (context, url, downloadProgress) =>
                             CircularProgressIndicator(
@@ -62,7 +58,7 @@ class Shop extends StatelessWidget {
               ),
               header: Container(
                 child: Center(
-                  child: Text("data"),
+                  child: Text(shop.shopName),
                 ),
                 color: Colors.blue[200]!.withOpacity(0.85),
                 padding: const EdgeInsets.symmetric(vertical: 8),

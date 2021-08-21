@@ -1,9 +1,84 @@
+import 'dart:convert';
+
 class Shop {
-  final String ShopName;
-  final double ShopRating;
-  final String ShopImageUrl;
-  const Shop(
-      {required this.ShopName,
-      required this.ShopImageUrl,
-      required this.ShopRating});
+  final String id;
+  final String shopName;
+  final double shopRating;
+  final String shopImageUrl;
+  final String shopType;
+  Shop({
+    required this.id,
+    required this.shopName,
+    required this.shopRating,
+    required this.shopImageUrl,
+    required this.shopType,
+  });
+   
+
+
+  Shop copyWith({
+    String? id,
+    String? shopName,
+    double? shopRating,
+    String? shopImageUrl,
+    String? shopType,
+  }) {
+    return Shop(
+      id: id ?? this.id,
+      shopName: shopName ?? this.shopName,
+      shopRating: shopRating ?? this.shopRating,
+      shopImageUrl: shopImageUrl ?? this.shopImageUrl,
+      shopType: shopType ?? this.shopType,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'shopName': shopName,
+      'shopRating': shopRating,
+      'shopImageUrl': shopImageUrl,
+      'shopType': shopType,
+    };
+  }
+
+  factory Shop.fromMap(Map<String, dynamic> map) {
+    return Shop(
+      id: map['id'],
+      shopName: map['shopName'],
+      shopRating: map['shopRating'],
+      shopImageUrl: map['shopImageUrl'],
+      shopType: map['shopType'],
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Shop.fromJson(String source) => Shop.fromMap(json.decode(source));
+
+  @override
+  String toString() {
+    return 'Shop(id: $id, shopName: $shopName, shopRating: $shopRating, shopImageUrl: $shopImageUrl, shopType: $shopType)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+  
+    return other is Shop &&
+      other.id == id &&
+      other.shopName == shopName &&
+      other.shopRating == shopRating &&
+      other.shopImageUrl == shopImageUrl &&
+      other.shopType == shopType;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+      shopName.hashCode ^
+      shopRating.hashCode ^
+      shopImageUrl.hashCode ^
+      shopType.hashCode;
+  }
 }
