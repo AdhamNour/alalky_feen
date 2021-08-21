@@ -3,12 +3,14 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 
 class Product {
+  final String productID;
   final String productName;
   final double productPrice;
   final Set<String> productTags;
   final String productImgUrl;
   final String ownerID;
   Product({
+    required this.productID,
     required this.productName,
     required this.productPrice,
     required this.productTags,
@@ -18,6 +20,7 @@ class Product {
   
 
   Product copyWith({
+    String? productID,
     String? productName,
     double? productPrice,
     Set<String>? productTags,
@@ -25,6 +28,7 @@ class Product {
     String? ownerID,
   }) {
     return Product(
+      productID: productID ?? this.productID,
       productName: productName ?? this.productName,
       productPrice: productPrice ?? this.productPrice,
       productTags: productTags ?? this.productTags,
@@ -35,6 +39,7 @@ class Product {
 
   Map<String, dynamic> toMap() {
     return {
+      'productID': productID,
       'productName': productName,
       'productPrice': productPrice,
       'productTags': productTags?.toList(),
@@ -45,6 +50,7 @@ class Product {
 
   factory Product.fromMap(Map<String, dynamic> map) {
     return Product(
+      productID: map['productID'],
       productName: map['productName'],
       productPrice: map['productPrice'],
       productTags: Set<String>.from(map['productTags']),
@@ -59,7 +65,7 @@ class Product {
 
   @override
   String toString() {
-    return 'Product(productName: $productName, productPrice: $productPrice, productTags: $productTags, productImgUrl: $productImgUrl, ownerID: $ownerID)';
+    return 'Product(productID: $productID, productName: $productName, productPrice: $productPrice, productTags: $productTags, productImgUrl: $productImgUrl, ownerID: $ownerID)';
   }
 
   @override
@@ -67,6 +73,7 @@ class Product {
     if (identical(this, other)) return true;
   
     return other is Product &&
+      other.productID == productID &&
       other.productName == productName &&
       other.productPrice == productPrice &&
       setEquals(other.productTags, productTags) &&
@@ -76,7 +83,8 @@ class Product {
 
   @override
   int get hashCode {
-    return productName.hashCode ^
+    return productID.hashCode ^
+      productName.hashCode ^
       productPrice.hashCode ^
       productTags.hashCode ^
       productImgUrl.hashCode ^

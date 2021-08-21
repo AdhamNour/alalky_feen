@@ -2,6 +2,7 @@ import 'package:af/providers/PartsProvider.dart';
 import 'package:af/providers/ProductsProvider.dart';
 import 'package:af/providers/ShopsProvider.dart';
 import 'package:af/screens/HomeScreen.dart';
+import 'package:af/screens/ShopScreen.dart';
 import 'package:af/screens/ShopsScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,10 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.orange,
         ),
         home: HomeScreen(),
-        routes: {ShopsScreen.routeName: (ctx) => ShopsScreen()},
+        routes: {
+          ShopsScreen.routeName: (ctx) => ShopsScreen(),
+          ShopScreen.routeName: (ctx) => ShopScreen(),
+        },
       ),
     );
   }

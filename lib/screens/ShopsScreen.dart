@@ -1,6 +1,6 @@
 import 'package:af/components/Drawer.dart';
 import 'package:af/components/Shop.dart';
-import 'package:af/constants/FilterConstants.dart';
+import 'package:af/constants/Constants.dart';
 import 'package:af/models/Shop.dart' as ShopModel;
 import 'package:af/models/partFilter.dart';
 import 'package:af/providers/ShopsProvider.dart';

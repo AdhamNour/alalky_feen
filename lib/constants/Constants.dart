@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:af/models/Product.dart';
 import 'package:af/models/Shop.dart';
 import 'package:af/models/partFilter.dart';
 import 'package:faker/faker.dart';
@@ -49,5 +50,20 @@ class CONSTANTS {
           shopType: types[i % types.length]));
     }
     return shops;
+  }
+
+  static List<Product> generateProducts() {
+    List<Product> Products = [];
+
+    for (var i = 0; i < 1500; i++) {
+      Products.add(Product(
+          productID: i.toString(),
+          productName: faker.conference.name(),
+          productPrice: (new Random()).nextDouble() * 300,
+          productTags: {'Anime', "waifu"},
+          productImgUrl: faker.image.image(),
+          ownerID: ((new Random()).nextInt(150)).toString()));
+    }
+    return Products;
   }
 }

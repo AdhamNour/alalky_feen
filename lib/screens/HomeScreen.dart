@@ -1,4 +1,4 @@
-import 'package:af/constants/FilterConstants.dart';
+import 'package:af/constants/Constants.dart';
 import 'package:af/providers/PartsProvider.dart';
 import 'package:af/screens/ShopsScreen.dart';
 import 'package:flutter/material.dart';

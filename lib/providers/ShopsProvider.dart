@@ -1,6 +1,6 @@
 import 'dart:core';
 
-import 'package:af/constants/FilterConstants.dart';
+import 'package:af/constants/Constants.dart';
 import 'package:af/models/Shop.dart';
 import 'package:flutter/material.dart';
 
