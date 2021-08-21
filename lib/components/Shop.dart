@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
+import 'dart:math';
 class Shop extends StatelessWidget {
   const Shop({Key? key}) : super(key: key);
 
@@ -22,12 +22,11 @@ class Shop extends StatelessWidget {
                         Icons.star,
                         color: Theme.of(context).primaryColor,
                       ),
-                      rating: 3,
+                      rating: (new Random()).nextDouble()*5 ,
                       itemSize: 25,
                       unratedColor:
                           Theme.of(context).primaryColor.withAlpha(64),
                     ),
-                    
                     IconButton(
                         onPressed: () {},
                         icon: Icon(

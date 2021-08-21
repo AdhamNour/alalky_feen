@@ -1,4 +1,6 @@
+import 'package:af/components/Drawer.dart';
 import 'package:af/components/Shop.dart';
+import 'package:af/models/partFilter.dart';
 import 'package:flutter/material.dart';
 
 class ShopsScreen extends StatelessWidget {
@@ -13,10 +15,12 @@ class ShopsScreen extends StatelessWidget {
       {'rating': 4}
     ];
 
+
     return Scaffold(
       appBar: AppBar(
         title: Text(params['type'].toString()),
       ),
+      drawer: ANDrawer(),
       body: ListView.builder(
         itemBuilder: (context, index) => Shop(),
         itemCount: 10,

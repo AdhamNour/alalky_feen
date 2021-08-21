@@ -1,9 +1,15 @@
+import 'package:af/constants/FilterConstants.dart';
+import 'package:af/providers/PartsProvider.dart';
 import 'package:af/screens/ShopsScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   void navigate({required String pagename, required BuildContext ctx}) {
+    Provider.of<Filters>(ctx, listen: false).currentFilters =
+        CONSTANTS.FILTERS[pagename];
     Navigator.of(ctx)
         .pushNamed(ShopsScreen.routeName, arguments: {'type': pagename});
   }
@@ -26,8 +32,8 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
-                        onPressed: () =>
-                            navigate(pagename: "Motorcycle", ctx: context),
+                        onPressed: () => navigate(
+                            pagename: CONSTANTS.MOTORCYCLE, ctx: context),
                         style: ElevatedButton.styleFrom(
                             primary: Colors.orange[700]),
                         child: Text('Motorcycle')),
@@ -39,7 +45,8 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
-                      onPressed: () => navigate(pagename: "Cars", ctx: context),
+                      onPressed: () =>
+                          navigate(pagename: CONSTANTS.CARS, ctx: context),
                       child: Text('Cars'),
                       style:
                           ElevatedButton.styleFrom(primary: Colors.orange[700]),
@@ -55,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                             primary: Colors.orange[700]),
                         onPressed: () =>
-                            navigate(pagename: "Bicycles", ctx: context),
+                            navigate(pagename: CONSTANTS.BICYCLE, ctx: context),
                         child: Text('Bicycles')),
                   ),
                   flex: 1,
