@@ -56,13 +56,14 @@ class CONSTANTS {
     List<Product> Products = [];
 
     for (var i = 0; i < 1500; i++) {
-      Products.add(Product(
+      var product = Product(
           productID: i.toString(),
           productName: faker.conference.name(),
           productPrice: (new Random()).nextDouble() * 300,
           productTags: {'Anime', "waifu"},
           productImgUrl: faker.image.image(),
-          ownerID: ((new Random()).nextInt(150)).toString()));
+          ownerID: ((new Random()).nextInt(150)).toString());
+      Products.add(product);
     }
     return Products;
   }

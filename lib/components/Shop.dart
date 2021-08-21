@@ -53,7 +53,8 @@ class Shop extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    Navigator.of(context).pushNamed(ShopScreen.routeName);
+                    Navigator.of(context).pushNamed(ShopScreen.routeName,
+                        arguments: {'shop': shop});
                   },
                 ),
               ),

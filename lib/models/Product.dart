@@ -42,7 +42,7 @@ class Product {
       'productID': productID,
       'productName': productName,
       'productPrice': productPrice,
-      'productTags': productTags?.toList(),
+      'productTags': productTags.toList(),
       'productImgUrl': productImgUrl,
       'ownerID': ownerID,
     };

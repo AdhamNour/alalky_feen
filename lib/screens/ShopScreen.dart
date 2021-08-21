@@ -1,4 +1,7 @@
+import 'package:af/models/Shop.dart';
+import 'package:af/providers/ProductsProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ShopScreen extends StatelessWidget {
   const ShopScreen({Key? key}) : super(key: key);
@@ -6,11 +9,19 @@ class ShopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final params =
+        ModalRoute.of(context)?.settings.arguments as Map<String, Object>;
+    final Shop paramsShop = params['shop'] as Shop;
+    final products = Provider.of<ProductProvider>(context)
+        .filterByShopID(shopId: paramsShop.id);
     return Scaffold(
       appBar: AppBar(
-        title: Text('this is the title bar'),
+        title: Text(paramsShop.shopName),
       ),
-      body: Center(child: Text('this is the body')),
+      body: ListView.builder(
+        itemBuilder: (context, index) => Text(products[index].productName),
+        itemCount: products.length,
+      ),
     );
   }
 }
