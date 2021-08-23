@@ -16,7 +16,7 @@ class ShopsScreen extends StatelessWidget {
     final Map<String, Object> params =
         ModalRoute.of(context)?.settings.arguments as Map<String, Object>;
     final shops = Provider.of<ShopsProvider>(context)
-        .getShopsByType(params['type'].toString());
+        .getShopsByType(params['type'].toString())..sort((a,b)=>b.shopRating.compareTo(a.shopRating));
 
     return Scaffold(
       appBar: AppBar(

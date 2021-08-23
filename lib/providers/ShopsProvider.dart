@@ -5,7 +5,6 @@ import 'package:af/models/Shop.dart';
 import 'package:flutter/material.dart';
 
 class ShopsProvider with ChangeNotifier {
-  
   List<Shop> _shops = CONSTANTS.generateShops();
   void set shops(List<Shop> shops) {
     _shops = [...shops];
@@ -19,5 +18,9 @@ class ShopsProvider with ChangeNotifier {
     return _shops
         .where((element) => element.shopType == targetShopType)
         .toList();
+  }
+
+  Shop getShopByID({required String targetShopID}) {
+    return _shops.firstWhere((element) => element.id == targetShopID);
   }
 }

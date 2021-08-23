@@ -1,3 +1,4 @@
+import 'package:af/components/Product.dart';
 import 'package:af/models/Shop.dart';
 import 'package:af/providers/ProductsProvider.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,9 @@ class ShopScreen extends StatelessWidget {
         title: Text(paramsShop.shopName),
       ),
       body: ListView.builder(
-        itemBuilder: (context, index) => Text(products[index].productName),
+        itemBuilder: (context, index) => Product(
+          product: products[index],
+        ),
         itemCount: products.length,
       ),
     );
