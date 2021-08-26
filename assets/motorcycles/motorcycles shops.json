@@ -1,0 +1,34 @@
+{
+    "Shops": [
+        {
+            "Name": "abo shaaban",
+            "Location": "1 bolak el gedid st,Cairo",
+            "URL": "./assets/motorcycles/abo_shaaban.jpg"
+        },
+        {
+            "Name": "abo helmy",
+            "Location": "Nahia, Boulaq Ad Dakrour, Giza",
+            "URL": "./assets/motorcycles/abo_helmy.jpg"
+        },
+        {
+            "Name": "ZOGMAR",
+            "Location": "Nulaq, Cairo",
+            "URL": "./assets/motorcycles/Zogmar.jpg"
+        },
+        {
+            "Name": "Abou 7awaa",
+            "Location": "6 El-Ansary st, El-Shaikh Farrag, Bulaq, Cairo",
+            "URL": "./assets/motorcycles/abo_eve.jpg"
+        },
+        {
+            "Name": "Dede",
+            "Location": "2 Wabour Al Faransawi, Boulaq, No.3, Boulaq, Cairo",
+            "URL": "./assets/motorcycles/dede.jpg"
+        },
+        {
+            "Name": "Abo Wadda",
+            "Location": "2 kafr Tahrmus, Kism Boulaq Al Dakrour, Giza",
+            "URL": "./assets/motorcycles/abo_wada.jpg"
+        }
+    ]
+}

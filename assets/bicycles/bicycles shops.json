@@ -1,0 +1,24 @@
+{
+  "Shops": [
+    {
+      "Name": "abu el gokh",
+      "Location": "17 Roushdy Basha, Asahah, Abdeen, Cairo",
+      "URL": "./assets/bicycles/abo_elgo5.jpg"
+    },
+    {
+      "Name": "Crazy Bike",
+      "Location": "Roushdy Basha, Asahah, Abdeen, Cairo",
+      "URL": "./assets/bicycles/crazy_bike.jpg"
+    },
+    {
+      "Name": "Trinx",
+      "Location": "23 Roushdy Basha, Asahah, Abdeen, Cairo",
+      "URL": "./assets/bicycles/trinx.jpg"
+    },
+    {
+      "Name": "3agalty",
+      "Location": "Al Manteqah assadesah, Nasr City, Cairo",
+      "URL": "./assets/bicycles/3agalty.jpg"
+    }
+  ]
+}

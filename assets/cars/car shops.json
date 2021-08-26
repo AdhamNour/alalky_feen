@@ -1,0 +1,34 @@
+{
+    "Shops": [
+        {
+            "Name": "Banorama el tawfekeya",
+            "Location": "Soul Al Tawfik, Oraby, Al Azbakeya, Cairo",
+            "URL": "./assets/cars/tawfe2ya.jpg"
+        },
+        {
+            "Name": "Ebrahiem El bana",
+            "Location": "5 zaky st, Downtown, Al Azbakeya, Cairo",
+            "URL": "./assets/cars/el_bana.jpg"
+        },
+        {
+            "Name": "Al Dakak",
+            "Location": "Wasat Al Balad, 5 Zaki st, Al Azbakeya, Cairo",
+            "URL": "./assets/cars/el_dakak.jpg"
+        },
+        {
+            "Name": "Al Fady",
+            "Location": "Soliman El-Halaby, 1 Oraby st, Al Azbakeya, Cairo",
+            "URL": "./assets/cars/al_fady.jpg"
+        },
+        {
+            "Name": "Al Sawy",
+            "Location": "9 Sayed Anbar, Oraby, Al Azbakeya, Cairo",
+            "URL": "./assets/cars/al_sawy.jpg"
+        },
+        {
+            "Name": "Magdy Ramzy",
+            "Location": "1 Zaki st, Al Tawfekya, Wasat el balad, Cairo",
+            "URL": "magdy_ramzy.jpg"
+        }
+    ]
+}
