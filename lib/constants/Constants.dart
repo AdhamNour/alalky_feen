@@ -32,25 +32,7 @@ class CONSTANTS {
       PartFilter(filterType: 'wheels'),
     ]
   };
-  static List<Shop> generateShops() {
-    List<Shop> shops = [];
-    var types = [CARS, MOTORCYCLE, BICYCLE];
-    var imgUrls = [
-      'https://images8.alphacoders.com/692/thumb-1920-692914.jpg',
-      'https://images5.alphacoders.com/903/903849.jpg',
-      'https://images2.alphacoders.com/809/809374.jpg',
-      'https://images3.alphacoders.com/769/769165.jpg'
-    ];
-    for (var i = 0; i < 150; i++) {
-      shops.add(Shop(
-          id: i.toString(),
-          shopName: faker.company.name(),
-          shopRating: (new Random().nextDouble()) * 5,
-          shopImageUrl: imgUrls[i % imgUrls.length],
-          shopType: types[i % types.length]));
-    }
-    return shops;
-  }
+
 
   static List<Product> generateProducts() {
     List<Product> Products = [];

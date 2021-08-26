@@ -6,15 +6,15 @@ class Shop {
   final double shopRating;
   final String shopImageUrl;
   final String shopType;
+  final String shopAddress;
   Shop({
     required this.id,
     required this.shopName,
     required this.shopRating,
     required this.shopImageUrl,
     required this.shopType,
+    required this.shopAddress,
   });
-   
-
 
   Shop copyWith({
     String? id,
@@ -22,6 +22,7 @@ class Shop {
     double? shopRating,
     String? shopImageUrl,
     String? shopType,
+    String? shopAddress,
   }) {
     return Shop(
       id: id ?? this.id,
@@ -29,6 +30,7 @@ class Shop {
       shopRating: shopRating ?? this.shopRating,
       shopImageUrl: shopImageUrl ?? this.shopImageUrl,
       shopType: shopType ?? this.shopType,
+      shopAddress: shopAddress ?? this.shopAddress,
     );
   }
 
@@ -39,6 +41,7 @@ class Shop {
       'shopRating': shopRating,
       'shopImageUrl': shopImageUrl,
       'shopType': shopType,
+      'shopAddress': shopAddress,
     };
   }
 
@@ -49,6 +52,7 @@ class Shop {
       shopRating: map['shopRating'],
       shopImageUrl: map['shopImageUrl'],
       shopType: map['shopType'],
+      shopAddress: map['shopAddress'],
     );
   }
 
@@ -58,7 +62,7 @@ class Shop {
 
   @override
   String toString() {
-    return 'Shop(id: $id, shopName: $shopName, shopRating: $shopRating, shopImageUrl: $shopImageUrl, shopType: $shopType)';
+    return 'Shop(id: $id, shopName: $shopName, shopRating: $shopRating, shopImageUrl: $shopImageUrl, shopType: $shopType, shopAddress: $shopAddress)';
   }
 
   @override
@@ -70,7 +74,8 @@ class Shop {
       other.shopName == shopName &&
       other.shopRating == shopRating &&
       other.shopImageUrl == shopImageUrl &&
-      other.shopType == shopType;
+      other.shopType == shopType &&
+      other.shopAddress == shopAddress;
   }
 
   @override
@@ -79,6 +84,7 @@ class Shop {
       shopName.hashCode ^
       shopRating.hashCode ^
       shopImageUrl.hashCode ^
-      shopType.hashCode;
+      shopType.hashCode ^
+      shopAddress.hashCode;
   }
 }

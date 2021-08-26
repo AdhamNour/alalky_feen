@@ -39,19 +39,7 @@ class Shop extends StatelessWidget {
               ),
               child: Center(
                 child: GestureDetector(
-                  child: CachedNetworkImage(
-                    imageUrl: shop.shopImageUrl,
-                    progressIndicatorBuilder:
-                        (context, url, downloadProgress) =>
-                            CircularProgressIndicator(
-                                value: downloadProgress.progress),
-                    errorWidget: (context, url, error) => Icon(Icons.error),
-                    imageBuilder: (context, imageProvider) => Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: imageProvider, fit: BoxFit.cover)),
-                    ),
-                  ),
+                  child: Image.asset(shop.shopImageUrl),
                   onTap: () {
                     Navigator.of(context).pushNamed(ShopScreen.routeName,
                         arguments: {'shop': shop});
