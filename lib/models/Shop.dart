@@ -7,6 +7,7 @@ class Shop {
   final String shopImageUrl;
   final String shopType;
   final String shopAddress;
+  final String priceStatus;
   Shop({
     required this.id,
     required this.shopName,
@@ -14,6 +15,7 @@ class Shop {
     required this.shopImageUrl,
     required this.shopType,
     required this.shopAddress,
+    required this.priceStatus,
   });
 
   Shop copyWith({
@@ -23,6 +25,7 @@ class Shop {
     String? shopImageUrl,
     String? shopType,
     String? shopAddress,
+    String? priceStatus,
   }) {
     return Shop(
       id: id ?? this.id,
@@ -31,6 +34,7 @@ class Shop {
       shopImageUrl: shopImageUrl ?? this.shopImageUrl,
       shopType: shopType ?? this.shopType,
       shopAddress: shopAddress ?? this.shopAddress,
+      priceStatus: priceStatus ?? this.priceStatus,
     );
   }
 
@@ -42,6 +46,7 @@ class Shop {
       'shopImageUrl': shopImageUrl,
       'shopType': shopType,
       'shopAddress': shopAddress,
+      'priceStatus':priceStatus,
     };
   }
 
@@ -53,6 +58,7 @@ class Shop {
       shopImageUrl: map['shopImageUrl'],
       shopType: map['shopType'],
       shopAddress: map['shopAddress'],
+      priceStatus: map['priceStatus']
     );
   }
 
@@ -62,7 +68,7 @@ class Shop {
 
   @override
   String toString() {
-    return 'Shop(id: $id, shopName: $shopName, shopRating: $shopRating, shopImageUrl: $shopImageUrl, shopType: $shopType, shopAddress: $shopAddress)';
+    return 'Shop(id: $id, shopName: $shopName, shopRating: $shopRating, shopImageUrl: $shopImageUrl, shopType: $shopType, shopAddress: $shopAddress, priceStatus: $priceStatus)';
   }
 
   @override
@@ -75,7 +81,8 @@ class Shop {
       other.shopRating == shopRating &&
       other.shopImageUrl == shopImageUrl &&
       other.shopType == shopType &&
-      other.shopAddress == shopAddress;
+      other.shopAddress == shopAddress &&
+      other.priceStatus == priceStatus;
   }
 
   @override
@@ -85,6 +92,7 @@ class Shop {
       shopRating.hashCode ^
       shopImageUrl.hashCode ^
       shopType.hashCode ^
-      shopAddress.hashCode;
+      shopAddress.hashCode ^
+      priceStatus.hashCode;
   }
 }
