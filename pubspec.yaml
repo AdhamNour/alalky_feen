@@ -62,7 +62,7 @@ flutter:
     - assets/motorcycles/Zogmar.jpg
     - assets/motorcycles/abo_eve.jpg
     - assets/motorcycles/dede.jpg
-    - assets/motorcycles/abo_wada.jpg"
+    # - assets/motorcycles/abo_wada.jpg"
     - assets/motorcycles/motorcycles_shops.json
     - assets/bicycles/abo_elgo5.jpg
     - assets/bicycles/crazy_bike.jpg

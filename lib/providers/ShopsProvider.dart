@@ -5,7 +5,7 @@ import 'package:af/models/Shop.dart';
 import 'package:flutter/material.dart';
 
 class ShopsProvider with ChangeNotifier {
-  List<Shop> _shops = CONSTANTS.generateShops();
+  List<Shop> _shops = [];
   void set shops(List<Shop> shops) {
     _shops = [...shops];
   }

@@ -3,7 +3,7 @@ import 'package:af/models/Product.dart';
 import 'package:flutter/widgets.dart';
 
 class ProductProvider with ChangeNotifier {
-  List<Product> _products = CONSTANTS.generateProducts();
+  List<Product> _products = [];
   void set products(List<Product> products) {
     _products = [...products];
   }
