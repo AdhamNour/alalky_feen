@@ -46,7 +46,7 @@ class Shop {
       'shopImageUrl': shopImageUrl,
       'shopType': shopType,
       'shopAddress': shopAddress,
-      'priceStatus':priceStatus,
+      'priceStatus': priceStatus,
     };
   }
 
@@ -58,7 +58,7 @@ class Shop {
       shopImageUrl: map['shopImageUrl'],
       shopType: map['shopType'],
       shopAddress: map['shopAddress'],
-      priceStatus: map['priceStatus']
+      priceStatus: map['priceStatus'],
     );
   }
 
