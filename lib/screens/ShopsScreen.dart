@@ -22,7 +22,7 @@ class ShopsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(params['type'].toString()),
       ),
-      drawer: ANDrawer(),
+      // drawer: ANDrawer(),//Remove this line
       body: ListView.builder(
         itemBuilder: (context, index) => Shop(shop: shops[index]),
         itemCount: shops.length,

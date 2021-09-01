@@ -10,6 +10,8 @@ class CONSTANTS {
   static String MOTORCYCLE = 'Motrocycles';
   static String BICYCLE = 'Bicycles';
   static Map<String, List<PartFilter>> FILTERS = {
+    //remove this and fill it from the product data in the shop screen
+    
     "Cars": [
       PartFilter(filterType: 'wheels'),
       PartFilter(filterType: 'another Wierd stuff'),
