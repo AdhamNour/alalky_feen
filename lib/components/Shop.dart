@@ -31,10 +31,11 @@ class Shop extends StatelessWidget {
                       unratedColor:
                           Theme.of(context).primaryColor.withAlpha(64),
                     ),
+                    Expanded(child: Text(shop.shopAddress))
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                 ),
-                color: Colors.black38,
+                color: Colors.white54,
                 padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
               ),
               child: Center(
@@ -47,10 +48,16 @@ class Shop extends StatelessWidget {
                 ),
               ),
               header: Container(
-                child: Center(
-                  child: Text(shop.shopName),
+                child: Row(
+                  children: [
+                    Text(shop.shopName),
+                    Text(
+                      'price Rate ${shop.priceStatus}',
+                    )
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 ),
-                color: Colors.blue[200]!.withOpacity(0.85),
+                color: Theme.of(context).primaryColor.withOpacity(0.85),
                 padding: const EdgeInsets.symmetric(vertical: 8),
               ),
             )),

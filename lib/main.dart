@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'Asal Tlaky',
+        title: 'ala2y feen',
         theme: ThemeData(
           primarySwatch: Colors.orange,
         ),
