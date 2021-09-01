@@ -31,7 +31,8 @@ class ShopScreen extends StatelessWidget {
     final shopsTypes = types.map((e) => PartFilter(filterType: e)).toList();
     final filterer = Provider.of<Filters>(context);
     if (firstRender) {
-      filterer.currentFilters = shopsTypes;
+      Future.delayed(Duration.zero)
+          .then((value) => filterer.currentFilters = shopsTypes);
     }
     firstRender = false;
     final allowedParts = filterer.getAllowedParts();
